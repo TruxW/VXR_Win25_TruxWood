@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -55,3 +55,4 @@ public class Log : MonoBehaviour
 
     }
 }
+*/
