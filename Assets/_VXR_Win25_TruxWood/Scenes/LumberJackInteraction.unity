@@ -8559,6 +8559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893826e458dd3624491c6b56b38108e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_grabInteractable: {fileID: 0}
+  m_controllerDataReader: {fileID: 0}
 --- !u!1 &1138640740
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class Blade : MonoBehaviour
 {
     public XRGrabInteractable m_grabInteractable;
-    public ConrollerDataReader m_controllerDataReader;
+    public ControllerDataReader m_controllerDataReader;
     XRBaseInteractor m_Interactor;
 
 
@@ -62,4 +62,3 @@ public class Blade : MonoBehaviour
     
     
 }
-*/
