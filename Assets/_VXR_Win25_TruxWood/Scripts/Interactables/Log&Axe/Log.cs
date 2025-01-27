@@ -53,4 +53,11 @@ public class Log : MonoBehaviour
         rg.isKinematic = false;
 
     }
+
+    void DisablePhysics()
+    {
+        Rigidbody rigidBody = GetComponent<Rigidbody>();
+        rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
 }
