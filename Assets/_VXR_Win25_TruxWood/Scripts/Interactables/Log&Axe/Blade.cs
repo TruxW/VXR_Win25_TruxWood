@@ -41,7 +41,7 @@ public class Blade : MonoBehaviour
         //Set the ControllerDataReader
         m_controllerDataReader = m_Interactor.transform.GetComponentInParent<ControllerDataReader>();
 
-
+        EnablePhysics();
     }
 
     //For (ResetControllerDataReader)
@@ -59,6 +59,21 @@ public class Blade : MonoBehaviour
         m_grabInteractable.selectEntered.AddListener(ResetControllerDataReader);
     }
 
-    
-    
+    public void Drop()
+    {
+        IXRSelectInteractable grabInteractable = m_grabInteractable;
+        m_Interactor.interactionManager.CancelInteractableSelection(grabInteractable);
+    }
+
+    public void disablePhysics()
+    {
+        Rigidbody rididBody = GetComponent<Rigidbody>();
+        rididBody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    private void EnablePhysics()
+    {
+        Rigidbody rididBody = GetComponent<Rigidbody>();
+        rididBody.constraints = RigidbodyConstraints.None;
+    }
 }
