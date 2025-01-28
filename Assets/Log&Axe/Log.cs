@@ -1,38 +1,27 @@
 using System;
-<<<<<<< Updated upstream
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Collider))]
 
-=======
-
-using UnityEditor.Experimental.GraphView;
-using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 /// <summary>
 /// The log script is checking if there is collision
 /// </summary>
-[RequireComponent(typeof(Collider
-    ))]
-<<<<<<< Stashed changes
+
 public class Log : MonoBehaviour
 {
     [SerializeField] GameObject logOne;
     [SerializeField] GameObject logTwo;
 
     Collider m_collider = null;
-    [SerializeField] float m_splitThreshold = 6f;
-<<<<<<< Updated upstream
-    [SerializeField] float m_stickThreshold = 4f;
+    [SerializeField] float m_splitThreshold = 4f;
+
+    [SerializeField] float m_stickThreshold = 2f;
 
 
-=======
-    
-    private void m_stickThreshold = 4f;
    
-<<<<<<< Stashed changes
+
     void Awake()
     {
         m_collider = GetComponent<Collider>();
@@ -44,15 +33,7 @@ public class Log : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-<<<<<<< Updated upstream
-=======
-        if (m_collider != null)
-            Debug.Log("CollisionHappening");
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-<<<<<<< Stashed changes
         Blade blade = null;
         if (other.CompareTag("Blade")) ;
         {
@@ -69,8 +50,7 @@ public class Log : MonoBehaviour
 
     private void Split(Blade blade)
     {
-<<<<<<< Updated upstream
-=======
+
 
         float bladeHitSpeed = blade.m_controllerDataReader.Velocity.magnitude;
         if (bladeHitSpeed > m_splitThreshold)
@@ -88,7 +68,7 @@ public class Log : MonoBehaviour
             blade.disablePhysics();
         }
        
-<<<<<<< Stashed changes
+
         EnablePhysics(logOne);
         EnablePhysics(logTwo);
     }
