@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Collider))]
+
 =======
+
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -14,7 +16,7 @@ using UnityEngine.Rendering.Universal;
 /// </summary>
 [RequireComponent(typeof(Collider
     ))]
->>>>>>> Stashed changes
+<<<<<<< Stashed changes
 public class Log : MonoBehaviour
 {
     [SerializeField] GameObject logOne;
@@ -30,7 +32,7 @@ public class Log : MonoBehaviour
     
     private void m_stickThreshold = 4f;
    
->>>>>>> Stashed changes
+<<<<<<< Stashed changes
     void Awake()
     {
         m_collider = GetComponent<Collider>();
@@ -50,7 +52,7 @@ public class Log : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
->>>>>>> Stashed changes
+<<<<<<< Stashed changes
         Blade blade = null;
         if (other.CompareTag("Blade")) ;
         {
@@ -86,7 +88,7 @@ public class Log : MonoBehaviour
             blade.disablePhysics();
         }
        
->>>>>>> Stashed changes
+<<<<<<< Stashed changes
         EnablePhysics(logOne);
         EnablePhysics(logTwo);
     }
