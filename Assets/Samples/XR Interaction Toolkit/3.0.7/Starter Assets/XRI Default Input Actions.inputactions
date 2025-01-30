@@ -3346,13 +3346,22 @@
             ]
         },
         {
-            "name": "New action map",
+            "name": "Custom Input",
             "id": "b00cb47a-654f-45e2-be97-45493de8ec68",
             "actions": [
                 {
                     "name": "RightControllerVelocity",
                     "type": "Value",
                     "id": "d5d426cc-a404-4bae-9136-ee6b1f718c10",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftControllerVelocity",
+                    "type": "Value",
+                    "id": "b0332341-43a8-4528-9aee-4c8fd3a3a262",
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
@@ -3368,6 +3377,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RightControllerVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f2956f57-53c3-4f22-853e-addd612abe39",
+                    "path": "<OculusTouchController>{LeftHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftControllerVelocity",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
