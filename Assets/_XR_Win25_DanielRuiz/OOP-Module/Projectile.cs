@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
 [RequireComponent (typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
@@ -8,6 +9,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] float m_speed = 1f;  
     [SerializeField] int m_damagePower= 5;
 
+    IObjectPool<Projectile> m_projectilePool;
+
+    public void SetPool(IObjectPool<Projectile> pool)
+    {
+        m_projectilePool = pool;
+    }
+
     void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
@@ -15,7 +23,9 @@ public class Projectile : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);  
+        //Use Object POOLING. return to pool
+        m_projectilePool.Release(this);
+        
     }
     public void Shoot(int damagePower)
     {
